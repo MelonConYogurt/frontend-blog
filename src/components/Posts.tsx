@@ -8,7 +8,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import {ScrollArea} from "@/components/ui/scroll-area";
-import {el} from "date-fns/locale";
 import {Heart, Calendar, ArrowRight} from "lucide-react";
 import Link from "next/link";
 
