@@ -87,7 +87,7 @@ function Posts({data}: Data) {
         data.map((element: Element, index: number) => (
           <Card
             key={index}
-            className="overflow-hidden transition-all duration-300 hover:shadow-lg"
+            className="overflow-hidden transition-all duration-300 hover:shadow-lg flex flex-col"
           >
             <div className="relative">
               {element.attributes.imageCover?.data?.attributes?.formats?.small
@@ -103,7 +103,7 @@ function Posts({data}: Data) {
               )}
             </div>
             <CardHeader>
-              <CardTitle className="text-xl font-bold line-clamp-2">
+              <CardTitle className="text-xl font-bold line-clamp-2 h-14">
                 {element.attributes.title}
               </CardTitle>
               <div className="flex items-center text-sm text-muted-foreground gap-2">
@@ -133,7 +133,7 @@ function Posts({data}: Data) {
                 </div>
               ) : element.attributes.slug ? (
                 <Link href={`/blog/${element.attributes.slug}`} passHref>
-                  <div className="flex items-center text-primary hover:underline cursor-pointer">
+                  <div className="flex items-center text-primary hover:underline cursor-pointer ">
                     Continuar leyendo
                     <ArrowRight className="w-4 h-4 ml-1" />
                   </div>
