@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import {ScrollArea} from "@/components/ui/scroll-area";
+import {el} from "date-fns/locale";
 import {Heart, Calendar, ArrowRight} from "lucide-react";
 import Link from "next/link";
 
@@ -27,6 +28,7 @@ interface Element {
     slug?: string;
     likes?: number;
     category?: string;
+    link?: string;
     imageCover?: {
       data?: {
         attributes?: {
@@ -125,12 +127,19 @@ function Posts({data}: Data) {
               </ScrollArea>
             </CardContent>
             <CardFooter className="flex justify-between items-center">
-              <Link href={`/blog/${element.attributes.slug}`} passHref>
+              {element.attributes.link ? (
                 <div className="flex items-center text-primary hover:underline cursor-pointer">
-                  Continuar leyendo
+                  <a href={element.attributes.link}>Continuar leyendo</a>
                   <ArrowRight className="w-4 h-4 ml-1" />
                 </div>
-              </Link>
+              ) : element.attributes.slug ? (
+                <Link href={`/blog/${element.attributes.slug}`} passHref>
+                  <div className="flex items-center text-primary hover:underline cursor-pointer">
+                    Continuar leyendo
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </div>
+                </Link>
+              ) : null}
               {element.attributes.likes && (
                 <div className="flex items-center">
                   <Heart className="w-5 h-5 text-red-500 mr-1" />

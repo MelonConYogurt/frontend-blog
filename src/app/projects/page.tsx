@@ -59,7 +59,7 @@ export default async function Project() {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-black">
             Proyectos
           </h2>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 mx-20 sm:grid-cols-2 lg:grid-cols-3">
             <Posts data={data}></Posts>
           </div>
         </section>
