@@ -24,6 +24,7 @@ import {
 import {ScrollArea} from "@/components/ui/scroll-area";
 import Link from "next/link";
 import GetPost from "@/utils/GetPostsClient";
+import ScrollUp from "@/components/AutoScroll";
 
 interface Element {
   id: number;
@@ -338,6 +339,7 @@ export default function Post({params}: PostProps) {
           </div>
         </div>
       </section>
+      <ScrollUp />
     </div>
   );
 }
