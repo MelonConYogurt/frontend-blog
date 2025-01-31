@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+---
 
-## Getting Started
+# Link de mi blog:
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[https//frontend-blog-pearl.vercel.app/](https://frontend-blog-pearl.vercel.app/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Página Web - Portafolio
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Este proyecto es una aplicación web construida con **Next.js** y **React**, que incluye una sección de portafolio y utiliza **Strapi** como backend para la gestión de contenidos. La aplicación permite la visualización dinámica de datos mediante el uso de **fetch** para obtener información de Strapi de manera asíncrona.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Características
 
-## Learn More
+- **Next.js**: Utilizamos Next.js para la generación de páginas y componentes de React, lo que permite un rendimiento optimizado y una fácil configuración para el renderizado del lado del servidor (SSR).
+- **React**: La estructura del proyecto se basa en componentes reutilizables, lo que facilita el desarrollo y mantenimiento de la interfaz de usuario.
+- **Páginas asíncronas**: Las páginas que consumen datos del backend son renderizadas de forma asíncrona mediante `fetch`, asegurando una experiencia de usuario fluida y reactiva.
+- **Strapi**: Integramos Strapi como CMS (Content Management System), permitiendo la creación, gestión y actualización de los datos que se muestran en la web, como imágenes, títulos y descripciones.
+- **Portafolio**: La aplicación incluye una sección dedicada a proyectos del portafolio, donde se muestran trabajos previos, junto con imágenes, descripciones y enlaces a cada proyecto.
 
-To learn more about Next.js, take a look at the following resources:
+## Instalación y Uso
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Requisitos
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Node.js
+- Yarn o npm
+- Strapi como backend
 
-## Deploy on Vercel
+### Instrucciones
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Clona este repositorio:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   git clone https://github.com/tu-usuario/nombre-del-repositorio.git
+   ```
+
+2. Ve al directorio del proyecto:
+
+   ```bash
+   cd nombre-del-repositorio
+   ```
+
+3. Instala las dependencias:
+
+   ```bash
+   npm install
+   # o
+   yarn install
+   ```
+
+4. Inicia la aplicación en modo desarrollo:
+
+   ```bash
+   npm run dev
+   # o
+   yarn dev
+   ```
+
+5. Para iniciar Strapi (si es parte del proyecto):
+
+   ```bash
+   cd backend
+   npm run develop
+   ```
+
+### Configuración de Strapi
+
+1. Asegúrate de tener Strapi configurado correctamente y con las colecciones de contenido necesarias, como por ejemplo:
+   - Posts de blog
+   - Proyectos del portafolio
+   - Imágenes y otros recursos multimedia
+
+2. Actualiza las variables de entorno del proyecto (`.env.local`) para conectar con la API de Strapi.
+
+## Estructura del Proyecto
+
+- **/pages**: Contiene las rutas y páginas de Next.js.
+- **/components**: Componentes reutilizables de la interfaz de usuario.
+- **/lib**: Lógica de conexión con el backend (fetch a la API de Strapi).
+- **/styles**: Archivos CSS y estilos globales.
+- **/backend**: Configuración del servidor de Strapi (opcional si está en el mismo repositorio).
+
+## Tecnologías Utilizadas
+
+- **Next.js** para el manejo de rutas y renderizado de las páginas.
+- **React** para la construcción de la interfaz de usuario.
+- **Strapi** como CMS para gestionar el contenido dinámico.
+- **CSS Modules** o **styled-components** para los estilos de la página.
+
+## Sección de Portafolio
+
+La sección de portafolio muestra una serie de proyectos cargados desde Strapi. Cada proyecto incluye:
+
+- Imagen destacada
+- Título del proyecto
+- Descripción breve
+- Enlace al proyecto o repositorio
+- Categorías y tecnologías utilizadas
+
+Los datos se obtienen mediante solicitudes asíncronas a la API de Strapi y se renderizan en componentes React utilizando técnicas de renderizado eficiente como `getStaticProps` o `getServerSideProps` de Next.js.
+
+## Contribuciones
+
+Si deseas contribuir a este proyecto, puedes hacer un fork y enviar un pull request con tus cambios.
+
+---
+
+
+
+![Screenshot 2024-09-10 003709](https://github.com/user-attachments/assets/dc1395ad-05fa-4e30-9da1-72389c662788)
+![Screenshot 2024-09-10 003716](https://github.com/user-attachments/assets/82451501-38c2-47cb-8535-2284430d8446)
+![image](https://github.com/user-attachments/assets/b3166a1c-9450-4805-a882-d80a4ca8b24a)
+
+![Screenshot 2024-09-10 003836](https://github.com/user-attachments/assets/dd6eb81b-3a1c-4a5e-9a48-9ae6c17db7a3)
